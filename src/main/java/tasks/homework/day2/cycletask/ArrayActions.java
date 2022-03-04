@@ -22,7 +22,9 @@ public class ArrayActions {
 
     public void arrayMultiplication(int[] array) {
 
+
         for (int i : array) {
+
             System.out.print(i * 5 + " ");
         }
         System.out.println();
@@ -30,7 +32,9 @@ public class ArrayActions {
 
     public void arraySquaring(int[] array) {
 
+
         for (int i : array) {
+
             System.out.print(i * i + " ");
         }
         System.out.println();
@@ -40,6 +44,7 @@ public class ArrayActions {
 
         int min = 99999;
         for (int i : array) {
+
             if (i < min) {
                 min = i;
             }
@@ -60,7 +65,7 @@ public class ArrayActions {
     }
 
     public void arraySorting(int[] array) {
-
+  
         int smaller;
         boolean isSorter = false;
         while (!isSorter) {

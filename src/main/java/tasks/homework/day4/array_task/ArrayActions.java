@@ -1,26 +1,21 @@
 package tasks.homework.day4.array_task;
-
 import tasks.homework.day2.cycletask.ArrayCreating;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 public class ArrayActions {
 
-    public void arraySum(int b) {
+    public int arraySum(int n, int[] array) {
 
-        int[] array = ArrayCreating.arrayCreating(10);
         int sum = 0;
-        for (int i = b - 1; i < array.length; i += b) {
+        for (int i = n - 1; i < array.length; i += n) {
             sum += array[i];
         }
-
-        System.out.println(sum);
-
+        return sum;
     }
 
-    public int[] getArray(int n) {
+    public int[] getGraterThanN(int n, int[] array) {
 
-        int[] array = ArrayCreating.arrayCreating(10);
         int count = 0;
         for (int i : array) {
             if (i > n) {
@@ -37,14 +32,11 @@ public class ArrayActions {
             }
         }
         return array1;
-
     }
 
-    public int sum() {
-        int[] array = ArrayCreating.arrayCreating(10);
+    public int sum(int[] array) {
         int sum = 0;
-        Calendar calendar = new GregorianCalendar();
-        int month = calendar.get(Calendar.MONTH);
+        int month = calendar.get(Calendar.MONTH) + 1;
         for (int i : array) {
             if (i % month == 0) {
                 sum += i;
@@ -61,5 +53,4 @@ public class ArrayActions {
         System.out.println("        ||     ||");
     }
 }
-
 
