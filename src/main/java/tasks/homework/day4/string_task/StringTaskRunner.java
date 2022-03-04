@@ -7,5 +7,6 @@ public class StringTaskRunner {
         String s = "Мама 10 мыла, раму - 5 мыла мама в 10 мыла 0.";
         StringTask stringTask = new StringTask();
         stringTask.printDuplicate(s);
+        stringTask.printNumbers(s);
     }
 }

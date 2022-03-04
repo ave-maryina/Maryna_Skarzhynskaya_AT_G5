@@ -24,4 +24,21 @@ public class StringTask {
             }
         }
     }
+
+    public void printNumbers(String s) {
+
+        Matcher matcher = Pattern.compile("\\d+").matcher(s);
+        int size = 0;
+        while (matcher.find()) {
+            size++;
+        }
+        matcher.reset();
+        int[] numbers = new int[size];
+        int index = 0;
+        while (matcher.find()) {
+            numbers[index] = Integer.parseInt(matcher.group());
+            System.out.println(numbers[index]);
+            index++;
+        }
+    }
 }
