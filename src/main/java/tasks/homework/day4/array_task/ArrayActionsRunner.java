@@ -18,6 +18,7 @@ public class ArrayActionsRunner {
         }
         System.out.println();
         System.out.println(arrayActions.sum(array));
+        arrayActions.draw();
     }
 }
 

@@ -47,4 +47,12 @@ import java.util.GregorianCalendar;
             }
             return sum;
         }
+
+        public void draw() {
+            System.out.println("   ^__^");
+            System.out.println("   (oo)\\_______");
+            System.out.println("   (__)\\ ) \\/\\  \\");
+            System.out.println("        ||----W |\\");
+            System.out.println("        ||     ||");
+        }
     }
