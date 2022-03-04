@@ -10,8 +10,8 @@ public class CycleTaskRunner  {
         TrainFor trainFor = new TrainFor();
         trainFor.output();
 
-        NewArray trainArray = new NewArray();
-        trainArray.arrayActions();
+        //ArrayActions trainArray = new ArrayActions();
+        //trainArray.arrayActions();
 
 
 
