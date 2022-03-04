@@ -6,7 +6,7 @@ public class ArrayActions {
 
     public void output() {
 
-        for (int i : ArrayCreating.arrayCreating(7)) {
+        for (int i : ArrayCreating.createArray(7)) {
             System.out.print(i + " ");
         }
         System.out.println();
@@ -14,7 +14,7 @@ public class ArrayActions {
 
     public void reverseOutput() {
 
-        int[] array = ArrayCreating.arrayCreating(7);
+        int[] array = ArrayCreating.createArray(7);
         for (int i = array.length - 1; i >= 0; i--) {
             System.out.print(array[i] + " ");
         }
@@ -23,7 +23,7 @@ public class ArrayActions {
 
     public void arrayMultiplication() {
 
-        for (int i : ArrayCreating.arrayCreating(7)) {
+        for (int i : ArrayCreating.createArray(7)) {
             System.out.print(i * 5 + " ");
         }
         System.out.println();
@@ -31,7 +31,7 @@ public class ArrayActions {
 
     public void arraySquaring() {
 
-        for (int i : ArrayCreating.arrayCreating(7)) {
+        for (int i : ArrayCreating.createArray(7)) {
             System.out.print(i * i + " ");
         }
         System.out.println();
@@ -40,7 +40,7 @@ public class ArrayActions {
     public void findingMinElement() {
 
         int min = 99999;
-        for (int i : ArrayCreating.arrayCreating(7)) {
+        for (int i : ArrayCreating.createArray(7)) {
             if (i < min) {
                 min = i;
             }
@@ -50,7 +50,7 @@ public class ArrayActions {
 
     public void changingArrayElements() {
 
-        int array[] = ArrayCreating.arrayCreating(7);
+        int array[] = ArrayCreating.createArray(7);
         int firstEl = array[0];
         array[0] = array[array.length - 1];
         array[array.length - 1] = firstEl;
@@ -62,7 +62,7 @@ public class ArrayActions {
     }
 
     public void arraySorting() {
-        int array[] = ArrayCreating.arrayCreating(7);
+        int array[] = ArrayCreating.createArray(7);
         int smaller;
         boolean isSorter = false;
         while (!isSorter) {

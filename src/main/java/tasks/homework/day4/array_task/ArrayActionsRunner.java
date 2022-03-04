@@ -17,9 +17,7 @@ public class ArrayActionsRunner {
             System.out.print(i + " ");
         }
         System.out.println();
-
+        System.out.println(arrayActions.sum(array));
     }
-
-
 }
 

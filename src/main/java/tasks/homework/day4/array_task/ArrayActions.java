@@ -35,4 +35,16 @@ import java.util.GregorianCalendar;
             }
             return array1;
         }
+
+        public int sum(int[] array) {
+            int sum = 0;
+            Calendar calendar = new GregorianCalendar();
+            int month = calendar.get(Calendar.MONTH) + 1;
+            for (int i : array) {
+                if (i % month == 0) {
+                    sum += i;
+                }
+            }
+            return sum;
+        }
     }
