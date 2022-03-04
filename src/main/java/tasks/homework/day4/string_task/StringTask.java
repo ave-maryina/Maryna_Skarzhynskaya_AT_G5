@@ -91,4 +91,11 @@ public class StringTask {
             System.out.printf("ip %s: ok - %d, failed - %d", ip[i], grantedCount, deniedCount).println();
         }
     }
+
+    public void dateFormat(String s) throws ParseException {
+        DateFormat dateFormat = new SimpleDateFormat("HH.mm dd.MM.yyyy");
+        Date date = dateFormat.parse(s);
+        DateFormat newDateFormat = new SimpleDateFormat("MMMM,d,yyyy HH:mm", Locale.ENGLISH);
+        System.out.println(newDateFormat.format(date));
+    }
 }
