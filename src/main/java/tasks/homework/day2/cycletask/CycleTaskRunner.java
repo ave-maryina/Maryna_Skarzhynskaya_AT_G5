@@ -9,11 +9,12 @@ public class CycleTaskRunner  {
 
         TrainFor trainFor = new TrainFor();
         trainFor.output();
-
-        //ArrayActions trainArray = new ArrayActions();
-        //trainArray.arrayActions();
-
-
-
+      
+        ArrayActions arrayActions = new ArrayActions();
+        int[] array = ArrayCreating.arrayCreating(7);
+        arrayActions.output(array);
+        arrayActions.reverseOutput(array);
+        arrayActions.arraySorting(array);
+        arrayActions.arrayMultiplication(array);
     }
 }
