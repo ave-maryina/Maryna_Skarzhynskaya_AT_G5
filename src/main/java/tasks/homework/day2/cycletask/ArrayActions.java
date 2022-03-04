@@ -4,43 +4,42 @@ import java.util.Random;
 
 public class ArrayActions {
 
-    public void output() {
+    public void output(int[] array) {
 
-        for (int i : ArrayCreating.arrayCreating(7)) {
+        for (int i : array) {
             System.out.print(i + " ");
         }
         System.out.println();
     }
 
-    public void reverseOutput() {
+    public void reverseOutput(int[] array) {
 
-        int[] array = ArrayCreating.arrayCreating(7);
         for (int i = array.length - 1; i >= 0; i--) {
             System.out.print(array[i] + " ");
         }
         System.out.println();
     }
 
-    public void arrayMultiplication() {
+    public void arrayMultiplication(int[] array) {
 
-        for (int i : ArrayCreating.arrayCreating(7)) {
+        for (int i : array) {
             System.out.print(i * 5 + " ");
         }
         System.out.println();
     }
 
-    public void arraySquaring() {
+    public void arraySquaring(int[] array) {
 
-        for (int i : ArrayCreating.arrayCreating(7)) {
+        for (int i : array) {
             System.out.print(i * i + " ");
         }
         System.out.println();
     }
 
-    public void findingMinElement() {
+    public void findingMinElement(int[] array) {
 
         int min = 99999;
-        for (int i : ArrayCreating.arrayCreating(7)) {
+        for (int i : array) {
             if (i < min) {
                 min = i;
             }
@@ -48,9 +47,8 @@ public class ArrayActions {
         System.out.println(min);
     }
 
-    public void changingArrayElements() {
+    public void changingArrayElements(int[] array) {
 
-        int array[] = ArrayCreating.arrayCreating(7);
         int firstEl = array[0];
         array[0] = array[array.length - 1];
         array[array.length - 1] = firstEl;
@@ -61,8 +59,8 @@ public class ArrayActions {
         System.out.println();
     }
 
-    public void arraySorting() {
-        int array[] = ArrayCreating.arrayCreating(7);
+    public void arraySorting(int[] array) {
+
         int smaller;
         boolean isSorter = false;
         while (!isSorter) {
