@@ -12,6 +12,14 @@ public class ArrayActionsRunner {
         }
         System.out.println();
         System.out.println(arrayActions.arraySum(3, array));
+        int[] array1 = arrayActions.getGraterThanN(10, array);
+        for (int i : array1) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
+
     }
+
+
 }
 

@@ -15,4 +15,24 @@ import java.util.GregorianCalendar;
             }
             return sum;
         }
-}
+
+        public int[] getGraterThanN(int n, int[] array) {
+
+            int count = 0;
+            for (int i : array) {
+                if (i > n) {
+                    count++;
+                }
+            }
+
+            int[] array1 = new int[count];
+            int e = 0;
+            for (int i = array.length - 1; i >= 0; i--) {
+                if (array[i] > n) {
+                    array1[e] = array[i];
+                    e++;
+                }
+            }
+            return array1;
+        }
+    }
