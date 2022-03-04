@@ -41,4 +41,54 @@ public class StringTask {
             index++;
         }
     }
+
+    public void ipAddress(String[] logs) throws ParseException {
+
+        boolean unique;
+        int size = 0;
+        for (int i = 0; i < logs.length; i++) {
+            unique = true;
+            for (int j = i - 1; j >= 0; j--) {
+                if ((logs[i].substring(22, 35).equals(logs[j].substring(22, 35)))) {
+                    unique = false;
+                    break;
+                }
+            }
+            if (unique) {
+                size++;
+            }
+        }
+
+        String[] ip = new String[size];
+        int index = 0;
+        for (int i = 0; i < logs.length; i++) {
+            unique = true;
+            for (int j = i - 1; j >= 0; j--) {
+                if ((logs[i].substring(22, 35).equals(logs[j].substring(22, 35)))) {
+                    unique = false;
+                    break;
+                }
+            }
+            if (unique) {
+                ip[index] = logs[i].substring(22, 35);
+                index++;
+            }
+        }
+
+        for (int i = 0; i < ip.length; i++) {
+            int deniedCount = 0;
+            int grantedCount = 0 ;
+            for (int j = 0; j < logs.length; j++) {
+                if (ip[i].equals(logs[j].substring(22, 35))) {
+                    if (logs[j].substring(36).equals("granted")) {
+                        grantedCount++;
+                    }
+                    if (logs[j].substring(36).equals("denied")) {
+                        deniedCount++;
+                    }
+                }
+            }
+            System.out.printf("ip %s: ok - %d, failed - %d", ip[i], grantedCount, deniedCount).println();
+        }
+    }
 }
