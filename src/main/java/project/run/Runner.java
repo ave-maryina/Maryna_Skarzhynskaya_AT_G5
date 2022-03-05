@@ -2,29 +2,17 @@ package project.run;
 
 import project.boxing.Bottle;
 
-public class Runner extends Thread {
+public class Runner {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Bottle bottle0_5 = new Bottle(0.5);
-        Bottle bottle1 = new Bottle(1);
-        Bottle bottle1_5 = new Bottle(1.5);
+//        Bottle bottle0_5 = new Bottle(0.5);
+//        Bottle bottle1 = new Bottle(1);
+//        Bottle bottle1_5 = new Bottle(1.5);
 
-        bottle0_5.open();
+        Bottle bottle1 = new Bottle(1.5, 5);
+        Bottle bottle2 = new Bottle(1.5, 22);
         bottle1.open();
-        bottle1_5.open();
-
-        //Bottle bottle1_5 = new Bottle(1.5, sparklingWater, 5);
-        //Bottle bottle1_50 = new Bottle(1.5, sparklingWater, 22);
-        //Runner thread = new Runner();
-        //thread.start();
-
-    }
-
-    @Override
-    public void run() {
-
-
-
+        bottle2.open();
     }
 }
