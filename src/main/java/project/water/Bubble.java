@@ -2,28 +2,30 @@ package project.water;
 
 public class Bubble {
 
-    public static final double VOLUME = 0.3;
-    private String gasStructure;
+    private static final double VOLUME = 0.3;
+    private String gas;
 
-    public void burst() {
+    public Bubble(String gas) {
+        System.out.println("Initialize gas field");
+        this.gas = gas;
+    }
 
+    public void cramp() {
+        System.out.println("Print \"Cram\"");
         System.out.print("Cramp! ");
     }
 
-    public Bubble(String gasStructure) {
-
-        this.gasStructure = gasStructure;
-    }
 
     public double getVolume() {
+        System.out.println("Return volume of bubble");
         return VOLUME;
     }
 
-    public String getGasStructure() {
-        return gasStructure;
+    public String getGas() {
+        return gas;
     }
 
-    public void setGasStructure(String gasStructure) {
-        this.gasStructure = gasStructure;
+    public void setGas(String gas) {
+        this.gas = gas;
     }
 }

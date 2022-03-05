@@ -2,10 +2,10 @@ package project.water;
 
 public abstract class Water {
 
-    private String color;
-    private boolean transparency;
-    private String smell;
-    private int temperature;
+    private String color = "no";
+    private String transparency = "transparent";
+    private String smell = "no";
+    private int temperature = 0;
 
     public String getColor() {
         return color;
@@ -15,11 +15,11 @@ public abstract class Water {
         this.color = color;
     }
 
-    public boolean isTransparency() {
+    public String getTransparency() {
         return transparency;
     }
 
-    public void setTransparency(boolean transparency) {
+    public void setTransparency(String transparency) {
         this.transparency = transparency;
     }
 

@@ -6,18 +6,16 @@ import project.water.SparklingWater;
 public class Bottle {
 
     private double volume;
-    private SparklingWater sparklingWater = new SparklingWater();
-    private boolean isOpened;
+    private SparklingWater water = new SparklingWater();
 
-    public Bottle(double volume) throws InterruptedException {
+    public Bottle(double volume, int temperature) throws InterruptedException {
+        System.out.println("Bottle is filled with an array of bubbles according to the volume");
         this.volume = volume;
-        //this.sparklingWater.setTemperature(temperature);
-        this.sparklingWater.setBubbles(new Bubble[(int) (this.volume * 10000)]);
-        this.sparklingWater.pump();
+        this.water.setTemperature(temperature);
+        //this.sparklingWater.setBubbles(new Bubble[(int) (this.volume * 10000)]);
+        this.water.pump(new Bubble[(int) (this.volume * 10000)]);
         //this.isOpened();
-
     }
-
    /* public void isOpened() throws InterruptedException {
         while (!isOpened) {
             Thread.sleep(2);
@@ -25,13 +23,16 @@ public class Bottle {
                 this.sparklingWater.degas(sparklingWater.getBubbles());
             }
         }
-
     }*/
 
     public void open() {
-        isOpened = true;
-        sparklingWater.degas();
+        System.out.println("Change the state of the water to open");
+        this.water.setOpened(true);
 
+    }
+    public void warm(int temperature) {
+        System.out.println("Set temperature of the water in the bottle");
+        this.water.setTemperature(temperature);
     }
 
     public double getVolume() {
@@ -42,12 +43,14 @@ public class Bottle {
         this.volume = volume;
     }
 
-    public SparklingWater getSparklingWater() {
-        return sparklingWater;
+    public SparklingWater getWater() {
+        System.out.println("Return object water");
+        return water;
     }
 
-    public void setSparklingWater(SparklingWater sparklingWater) {
-        this.sparklingWater = sparklingWater;
+    public void setWater(SparklingWater sparklingWater) {
+        System.out.println("Add new object of water");
+        this.water = water;
     }
 
 }

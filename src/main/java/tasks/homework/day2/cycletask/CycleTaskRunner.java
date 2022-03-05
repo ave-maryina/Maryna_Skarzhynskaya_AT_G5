@@ -11,7 +11,7 @@ public class CycleTaskRunner  {
         trainFor.output();
       
         ArrayActions arrayActions = new ArrayActions();
-        int[] array = ArrayCreating.arrayCreating(7);
+        int[] array = ArrayCreating.createArray(7);
         arrayActions.output(array);
         arrayActions.reverseOutput(array);
         arrayActions.arraySorting(array);
