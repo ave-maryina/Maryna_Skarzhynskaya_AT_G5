@@ -35,14 +35,14 @@ public class SparklingWater extends Water {
     private void degas() throws InterruptedException {
         System.out.println("Releases batch of bubbles every second");
 
-                for (int i = 0; i < bubbles.length; i += 10 + 5 * getTemperature()) {
-                    for(int j = i; j <= i + 10 + 5 * getTemperature(); j++) {
-                        bubbles[j].cramp();
-                        bubbles[j] = null;
-                    }
+        for (int i = 0; i < bubbles.length; i += 10 + 5 * getTemperature()) {
+            for(int j = i; j <= i + 10 + 5 * getTemperature(); j++) {
+                bubbles[j].cramp();
+                bubbles[j] = null;
+            }
 
-                    Thread.sleep(1000);
-                }
+            Thread.sleep(1000);
+        }
 
     }
 
