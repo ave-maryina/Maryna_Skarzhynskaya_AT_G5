@@ -12,9 +12,6 @@ public class SparklingWater extends Water {
 
     public void  pump(Bubble[] bubbles) {
         System.out.println("Set array of Bubbles in the water");
-        for (int i = 0; i < bubbles.length; i++) {
-            bubbles[i] = new Bubble("carbon dioxide");
-        }
         this.setBubbles(bubbles);
     }
 
@@ -24,32 +21,29 @@ public class SparklingWater extends Water {
             @Override
             public void run() {
                 if (isOpened) {
-                    degas();
+                    try {
+                        degas();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
         thread.start();
     }
 
-    private void degas() {
+    private void degas() throws InterruptedException {
         System.out.println("Releases batch of bubbles every second");
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
+
                 for (int i = 0; i < bubbles.length; i += 10 + 5 * getTemperature()) {
                     for(int j = i; j <= i + 10 + 5 * getTemperature(); j++) {
                         bubbles[j].cramp();
                         bubbles[j] = null;
                     }
-                }
-                try {
+
                     Thread.sleep(1000);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
                 }
-            }
-        });
-        thread.start();
+
     }
 
     public boolean isSparkle() {

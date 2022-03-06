@@ -12,9 +12,12 @@ public class Bottle {
         System.out.println("Bottle is filled with an array of bubbles according to the volume");
         this.volume = volume;
         this.water.setTemperature(temperature);
-        //this.sparklingWater.setBubbles(new Bubble[(int) (this.volume * 10000)]);
-        this.water.pump(new Bubble[(int) (this.volume * 10000)]);
-        //this.isOpened();
+        Bubble[] bubbles = new Bubble[(int) (volume * 10000)];
+        for (int i = 0; i < bubbles.length; i++) {
+            bubbles[i] = new Bubble("carbon dioxide");
+        }
+        this.water.pump(bubbles);
+
     }
    /* public void isOpened() throws InterruptedException {
         while (!isOpened) {
