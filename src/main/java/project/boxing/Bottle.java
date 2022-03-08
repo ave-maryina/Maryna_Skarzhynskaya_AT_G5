@@ -1,14 +1,20 @@
 package project.boxing;
 
-import project.water.Bubble;
-import project.water.SparklingWater;
+import project.interfaces.Containable;
+import project.Material.Plastic;
+import project.interfaces.Transformable;
+import project.water_sand.Bubble;
+import project.water_sand.SparklingWater;
 
-public class Bottle {
+public class Bottle extends Vessel implements Containable {
 
     private double volume;
     private SparklingWater water = new SparklingWater();
 
+
     public Bottle(double volume, int temperature) throws InterruptedException {
+
+        super(volume, 4.5, 750, new Plastic());
         System.out.println("Bottle is filled with an array of bubbles according to the volume");
         this.volume = volume;
         this.water.setTemperature(temperature);
@@ -19,23 +25,41 @@ public class Bottle {
         this.water.pump(bubbles);
 
     }
-   /* public void isOpened() throws InterruptedException {
-        while (!isOpened) {
-            Thread.sleep(2);
-            if (isOpened) {
-                this.sparklingWater.degas(sparklingWater.getBubbles());
-            }
-        }
-    }*/
+
+    @Override
+    public void addStuff(Transformable stuff) {
+
+    }
+
+    @Override
+    public Transformable removeStuff() {
+        return null;
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return false;
+    }
+
+    @Override
+    public int getFreeSpace() {
+        return 0;
+    }
 
     public void open() {
         System.out.println("Change the state of the water to open");
-        this.water.setOpened(true);
+        water.setOpened(true);
 
     }
+
+    @Override
+    public void close() {
+
+    }
+
     public void warm(int temperature) {
         System.out.println("Set temperature of the water in the bottle");
-        this.water.setTemperature(temperature);
+        water.setTemperature(temperature);
     }
 
     public double getVolume() {
@@ -53,7 +77,7 @@ public class Bottle {
 
     public void setWater(SparklingWater sparklingWater) {
         System.out.println("Add new object of water");
-        this.water = water;
+        this.water = sparklingWater;
     }
 
 }

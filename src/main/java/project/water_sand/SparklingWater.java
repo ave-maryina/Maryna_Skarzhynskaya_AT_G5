@@ -1,4 +1,4 @@
-package project.water;
+package project.water_sand;
 
 public class SparklingWater extends Water {
 
@@ -10,22 +10,27 @@ public class SparklingWater extends Water {
         isOpened();
     }
 
-    public void  pump(Bubble[] bubbles) {
+    public void pump(Bubble[] bubbles) {
         System.out.println("Set array of Bubbles in the water");
-        this.setBubbles(bubbles);
+        this.bubbles = bubbles;
     }
 
     private void isOpened() {
-        System.out.println("Check state of the water, if opened call method degas");
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                if (isOpened) {
+                while (!isOpened) {
+                    System.out.println("Bottle is closed");
                     try {
-                        degas();
+                        Thread.sleep(2000);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
+                }
+                try {
+                    degas();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
         });
@@ -34,9 +39,8 @@ public class SparklingWater extends Water {
 
     private void degas() throws InterruptedException {
         System.out.println("Releases batch of bubbles every second");
-
         for (int i = 0; i < bubbles.length; i += 10 + 5 * getTemperature()) {
-            for(int j = i; j <= i + 10 + 5 * getTemperature(); j++) {
+            for (int j = i; j <= i + 10 + 5 * getTemperature(); j++) {
                 bubbles[j].cramp();
                 bubbles[j] = null;
             }
@@ -48,12 +52,7 @@ public class SparklingWater extends Water {
 
     public boolean isSparkle() {
         System.out.println("Return true if there are gas bubbles in the water");
-        for (Bubble bubble : bubbles) {
-            if (!(bubble == null)) {
-                return true;
-            }
-        }
-        return false;
+        return bubbles[bubbles.length - 1] == null;
     }
 
     public void setOpened(boolean isOpened) {
@@ -65,7 +64,10 @@ public class SparklingWater extends Water {
         return bubbles;
     }
 
-    public void setBubbles(Bubble[] bubbles) {
-        this.bubbles = bubbles;
+    @Override
+    public void mix() {
+
     }
 }
+
+
