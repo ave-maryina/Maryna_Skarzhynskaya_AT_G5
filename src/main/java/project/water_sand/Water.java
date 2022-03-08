@@ -1,6 +1,8 @@
-package project.water;
+package project.water_sand;
 
-public abstract class Water {
+import project.interfaces.Transformable;
+
+public abstract class Water implements Transformable {
 
     private String color = "no";
     private String transparency = "transparent";

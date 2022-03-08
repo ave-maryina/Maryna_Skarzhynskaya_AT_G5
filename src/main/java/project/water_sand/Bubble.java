@@ -1,4 +1,4 @@
-package project.water;
+package project.water_sand;
 
 public class Bubble {
 
@@ -11,7 +11,7 @@ public class Bubble {
     }
 
     public void cramp() {
-        System.out.println("Print \"Cram\"");
+        //System.out.println("Print \"Cram\"");
         System.out.print("Cramp! ");
     }
 
