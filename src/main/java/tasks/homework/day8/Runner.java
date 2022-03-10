@@ -7,8 +7,8 @@ public class Runner {
 
     public static void main(String[] args) throws ParseException, IOException {
 
-        InputOutput.printNextMonth();
-        InputOutput.countPunctuationAndWords("file.txt");
-
+        //InputOutput.printNextMonth();
+        //InputOutput.countPunctuationAndWords("file.txt");
+        InputOutput.createDirectoryFiles();
     }
 }
