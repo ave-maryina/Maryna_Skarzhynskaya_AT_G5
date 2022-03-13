@@ -24,6 +24,15 @@ public  class InputOutput {
 
     }
 
+    public static void printFilesNames(String path) throws IOException {
+
+        File dir = new File(path);
+        File[] files = dir.listFiles();
+        for (File f : files) {
+            System.out.println(f.getName());
+        }
+    }
+
     public static void countPunctuationAndWords(String file) throws IOException {
 
         BufferedReader reader = new BufferedReader(new FileReader(file));
