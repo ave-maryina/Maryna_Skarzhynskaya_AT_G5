@@ -9,6 +9,7 @@ public class Runner {
 
         InputOutput.printNextMonth();
         InputOutput.countPunctuationAndWords("file.txt");
-
+        InputOutput.createDirectoryFiles();
+        InputOutput.printFilesNames("C:\\Users\\Марина\\IdeaProjects\\untitled3");
     }
 }
