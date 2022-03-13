@@ -46,7 +46,7 @@ public  class InputOutput {
         }
         reader.close();
 
-        Matcher matcherPunctuation = Pattern.compile("[.,?!:;-]").matcher(text);
+        Matcher matcherPunctuation = Pattern.compile("[.,?!:;—]").matcher(text);
         Matcher matcherWords = Pattern.compile("\\w+").matcher(text);
 
         while (matcherPunctuation.find()) {
