@@ -1,0 +1,62 @@
+package tasks.homework.day_9;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+public class MyLists {
+
+    public static void figures() throws IOException {
+        int counter = 0;
+        List<String> figures = new ArrayList<>(Arrays.asList("Овал", "Прямоугольник", "Круг", "Квадрат", "Эллипс"));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("figures.txt"));
+        for (String s : figures) {
+            writer.write(" - " + s);
+            if (!s.contains("и")) {
+                counter++;
+            }
+        }
+        writer.close();
+
+        System.out.println(counter);
+        for (int i = 0; i < figures.size(); i++) {
+            System.out.print(figures.get(i) + " ");
+        }
+        System.out.println();
+        figures.add(3, "Треугольник");
+
+        for (String s : figures) {
+            System.out.print(s + " ");
+        }
+        System.out.println();
+    }
+
+    public static void butterflies() {
+        List<String> butterflies = new ArrayList<>();
+        int counter = 0;
+        butterflies.add("Common blue");
+        butterflies.add("Swallowtail");
+        butterflies.add("Aglais io");
+        butterflies.add("Common blue");
+
+        for (String s : butterflies) {
+            System.out.println("\"" + s + "\"");
+            if (s.contains("o")) {
+                counter++;
+            }
+        }
+        System.out.println(counter);
+        for (int i = 0; i < butterflies.size(); i++) {
+            System.out.print(butterflies.get(i) + " ");
+        }
+        System.out.println();
+
+        for (String s : butterflies) {
+            System.out.println(s);
+        }
+    }
+}
