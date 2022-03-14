@@ -59,4 +59,18 @@ public class MyLists {
             System.out.println(s);
         }
     }
+
+    public static void cities() {
+        List<String> cities = new ArrayList<>(Arrays.asList("Минск", "Москва", "Берлин"));
+        int sum = 0;
+        for (String s : cities) {
+            System.out.println(s);
+            sum += s.length();
+        }
+        System.out.println(sum);
+        for (int i = 0; i < cities.size(); i++) {
+            System.out.print(cities.get(i) + " ");
+        }
+        System.out.println();
+    }
 }
