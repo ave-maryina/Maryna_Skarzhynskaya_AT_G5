@@ -4,9 +4,7 @@ import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class MyLists {
 
@@ -72,5 +70,22 @@ public class MyLists {
             System.out.print(cities.get(i) + " ");
         }
         System.out.println();
+    }
+
+    public static void cars() {
+        Set<String> cars = new HashSet<>(Arrays.asList("Мерс", "Ауди", "Жигуль", "Рено", "Жигуль", "Жигуль", "Ауди"));
+        List<String> list = new ArrayList<>();
+        for (String s : cars) {
+            System.out.println("\"" + s + "\"");
+            if (s.length() > 4) {
+                list.add(s);
+            }
+        }
+        for (String s : list) {
+            cars.remove(s);
+        }
+        for (String s : cars) {
+            System.out.println(s);
+        }
     }
 }
