@@ -8,6 +8,7 @@ public class MyListsRunner {
         //MyLists.butterflies();
         //MyLists.figures();
         //MyLists.cities();
-        MyLists.cars();
+        //MyLists.cars();
+        MyLists.countries();
     }
 }

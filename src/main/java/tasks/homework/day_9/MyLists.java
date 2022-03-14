@@ -88,4 +88,24 @@ public class MyLists {
             System.out.println(s);
         }
     }
+
+    public static void countries() {
+        List<String> countries = new ArrayList<>();
+        int counter = 0;
+        countries.add("Андора");
+        countries.add("Португалия");
+        countries.add("Англия");
+        countries.add("Замбия");
+        for (String s : countries) {
+            System.out.print(s + ", ");
+            if (s.length() < 7) {
+                counter++;
+            }
+        }
+        System.out.println();
+        System.out.println(counter);
+        for (int i = 0; i < countries.size(); i++) {
+            System.out.println(countries.get(i));
+        }
+    }
 }
