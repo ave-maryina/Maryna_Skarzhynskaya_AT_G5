@@ -48,9 +48,6 @@ out/
 ##############################
 ## Eclipse
 ##############################
-figures.txt
-new_file.txt
-file.txt
 .settings/
 bin/
 tmp/
