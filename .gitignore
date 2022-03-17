@@ -13,6 +13,7 @@ hs_err_pid*
 ## Maven
 ##############################
 target/
+pom.xml
 pom.xml.tag
 pom.xml.releaseBackup
 pom.xml.versionsBackup
@@ -47,6 +48,9 @@ out/
 ##############################
 ## Eclipse
 ##############################
+figures.txt
+new_file.txt
+file.txt
 .settings/
 bin/
 tmp/
