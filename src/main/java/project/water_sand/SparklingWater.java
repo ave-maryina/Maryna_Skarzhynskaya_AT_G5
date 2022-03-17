@@ -1,16 +1,19 @@
 package project.water_sand;
 
+import java.util.List;
+
 public class SparklingWater extends Water {
 
     private boolean isOpened;
-    private Bubble[] bubbles;
+    private List<Bubble> bubbles;
 
     public SparklingWater() {
+        super();
         System.out.println("Call method isOpened()");
         isOpened();
     }
 
-    public void pump(Bubble[] bubbles) {
+    public void pump(List<Bubble> bubbles) {
         System.out.println("Set array of Bubbles in the water");
         this.bubbles = bubbles;
     }
@@ -39,10 +42,10 @@ public class SparklingWater extends Water {
 
     private void degas() throws InterruptedException {
         System.out.println("Releases batch of bubbles every second");
-        for (int i = 0; i < bubbles.length; i += 10 + 5 * getTemperature()) {
+        for (int i = 0; i < bubbles.size(); i += 10 + 5 * getTemperature()) {
             for (int j = i; j <= i + 10 + 5 * getTemperature(); j++) {
-                bubbles[j].cramp();
-                bubbles[j] = null;
+                bubbles.get(j).cramp();
+                bubbles.remove(j);
             }
 
             Thread.sleep(1000);
@@ -52,7 +55,7 @@ public class SparklingWater extends Water {
 
     public boolean isSparkle() {
         System.out.println("Return true if there are gas bubbles in the water");
-        return bubbles[bubbles.length - 1] == null;
+        return bubbles.size() > 0;
     }
 
     public void setOpened(boolean isOpened) {
@@ -60,7 +63,7 @@ public class SparklingWater extends Water {
         this.isOpened = isOpened;
     }
 
-    public Bubble[] getBubbles() {
+    public List<Bubble> getBubbles() {
         return bubbles;
     }
 

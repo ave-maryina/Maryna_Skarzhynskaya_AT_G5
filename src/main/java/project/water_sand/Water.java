@@ -2,12 +2,37 @@ package project.water_sand;
 
 import project.interfaces.Transformable;
 
+import java.util.Objects;
+
 public abstract class Water implements Transformable {
 
     private String color = "no";
     private String transparency = "transparent";
     private String smell = "no";
     private int temperature = 0;
+
+    @Override
+    public String toString() {
+        return "Water{" +
+                "color='" + color + '\'' +
+                ", transparency='" + transparency + '\'' +
+                ", smell='" + smell + '\'' +
+                ", temperature=" + temperature +
+                '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Water water = (Water) o;
+        return temperature == water.temperature && Objects.equals(color, water.color) && Objects.equals(transparency, water.transparency) && Objects.equals(smell, water.smell);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(color, transparency, smell, temperature);
+    }
 
     public String getColor() {
         return color;

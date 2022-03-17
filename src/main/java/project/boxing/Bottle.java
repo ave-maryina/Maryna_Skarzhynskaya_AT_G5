@@ -6,6 +6,9 @@ import project.interfaces.Transformable;
 import project.water_sand.Bubble;
 import project.water_sand.SparklingWater;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Bottle extends Vessel implements Containable {
 
     private double volume;
@@ -18,17 +21,16 @@ public class Bottle extends Vessel implements Containable {
         System.out.println("Bottle is filled with an array of bubbles according to the volume");
         this.volume = volume;
         this.water.setTemperature(temperature);
-        Bubble[] bubbles = new Bubble[(int) (volume * 10000)];
-        for (int i = 0; i < bubbles.length; i++) {
-            bubbles[i] = new Bubble("carbon dioxide");
+        //Bubble[] bubble = new Bubble[(int) (volume * 10000)];
+        List<Bubble> bubbles = new ArrayList<>();
+        for (int i = 0; i < volume * 10000; i++) {
+            bubbles.add(new Bubble("CO2"));
         }
         this.water.pump(bubbles);
-
     }
 
     @Override
     public void addStuff(Transformable stuff) {
-
     }
 
     @Override
@@ -49,12 +51,10 @@ public class Bottle extends Vessel implements Containable {
     public void open() {
         System.out.println("Change the state of the water to open");
         water.setOpened(true);
-
     }
 
     @Override
     public void close() {
-
     }
 
     public void warm(int temperature) {
