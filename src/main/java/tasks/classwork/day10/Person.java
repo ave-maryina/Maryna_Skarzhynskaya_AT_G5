@@ -13,7 +13,6 @@ public class Person {
         this.name = name;
         this.sex = sex;
     }
-
     public enum Sex {
         MAN, WOMEN
     }

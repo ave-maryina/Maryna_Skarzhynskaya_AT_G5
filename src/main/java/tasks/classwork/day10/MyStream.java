@@ -13,6 +13,5 @@ public class MyStream {
         long l = stream.list.stream().filter("mama"::equals).count();
         System.out.println(l);
         stream.list.forEach(System.out::println);
-
     }
 }

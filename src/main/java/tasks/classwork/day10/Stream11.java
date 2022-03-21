@@ -27,6 +27,5 @@ public class Stream11 {
         }).peek(p -> System.out.println(p.name)).collect(Collectors.toList());
 
         people.stream().sorted((p1, p2) -> p1.sex != p2.sex ? p1.sex.compareTo(p2.sex) : p1.age - p2.age);
-
     }
 }

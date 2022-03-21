@@ -8,7 +8,5 @@ public class Runner {
         //mc.justMethod(System.out::println);
         X x = new X("Lala");
         mc.justMethod((s) -> x);
-
-
     }
 }

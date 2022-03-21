@@ -13,6 +13,5 @@ public class MyStream1 {
         list.stream().skip(4).findFirst().get();
         list.stream().skip(2).limit(2).collect(Collectors.toList());
         list.stream().filter(s -> s.contains("m")).distinct().collect(Collectors.toList()).forEach(System.out::println);
-
     }
 }

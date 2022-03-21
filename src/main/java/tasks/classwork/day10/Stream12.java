@@ -23,8 +23,5 @@ public class Stream12 {
 
         int d = list.stream().map(st -> st.length()).collect(Collectors.summingInt(p -> p%2 == 1 ? p : 0));
         //list.stream().map(String::length).mapToInt(p -> p%2 == 1 p)
-
-
-
     }
 }
