@@ -28,7 +28,5 @@ public class Car extends Vehicle implements Movable {
     @Override
     public void stop() {
         System.out.println("Car has stopped");
-
-
     }
 }
