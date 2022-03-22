@@ -13,8 +13,7 @@ public class Task2 {
     static List<Integer> list = new ArrayList<>();
 
     public static void main(String[] args) {
-        Random random = new Random();
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i < n; i++) {
             list.add(rnd(minValue, maxValue));
         }
         list.stream().filter(x -> x%3 == 0 && x%5 == 0).forEach(System.out::println);
