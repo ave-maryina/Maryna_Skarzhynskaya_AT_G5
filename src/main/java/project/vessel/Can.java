@@ -1,18 +1,19 @@
-package project.boxing;
+package project.vessel;
 
-import project.interfaces.Containable;
-import project.Material.Metal;
-import project.interfaces.Transformable;
+import project.material.Material;
+import project.stuff.Transformable;
 
 public class Can extends Vessel implements Containable {
 
+    private Transformable stuff;
+
+
     public Can() {
-        super(250, 35, 450, new Metal());
+        super(250, 10.0, Material.Metal);
     }
 
     @Override
     public void addStuff(Transformable stuff) {
-
     }
 
     @Override
@@ -26,17 +27,11 @@ public class Can extends Vessel implements Containable {
     }
 
     @Override
-    public int getFreeSpace() {
-        return 0;
-    }
-
-    @Override
     public void open() {
-
     }
 
     @Override
-    public void close() {
+    public void warm(int temperature) {
 
     }
 }

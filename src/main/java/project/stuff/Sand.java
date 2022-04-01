@@ -1,6 +1,4 @@
-package project.water_sand;
-
-import project.interfaces.Transformable;
+package project.stuff;
 
 import java.util.Objects;
 
@@ -52,7 +50,13 @@ public class Sand implements Transformable {
     }
 
     @Override
-    public void mix() {
+    public void setOpened() {
 
+    }
+
+    @Override
+    public Transformable setTemperature(int temperature) {
+
+        return null;
     }
 }

@@ -1,14 +1,29 @@
-package project.Material;
+package project.material;
 
-public abstract class Material {
+public enum Material {
+    Glass(0.017, "green", 2200),
+    Plastic(0.2, "white", 1800),
+    Metal(58.0, "silver", 7800);
 
     private double thermalConductivity;
     private String color;
     private double density;
 
-    public Material(double thermalConductivity, String color, double density) {
+    Material(double thermalConductivity, String color, double density) {
         this.thermalConductivity = thermalConductivity;
         this.color = color;
         this.density = density;
+    }
+
+    public double getThermalConductivity() {
+        return thermalConductivity;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public double getDensity() {
+        return density;
     }
 }
