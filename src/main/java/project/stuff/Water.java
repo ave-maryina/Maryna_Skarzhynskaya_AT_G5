@@ -29,6 +29,6 @@ public abstract class Water implements Transformable {
     @Override
     public Transformable setTemperature(int temperature) {
         this.temperature = temperature;
-        return null;
+        return this;
     }
 }
