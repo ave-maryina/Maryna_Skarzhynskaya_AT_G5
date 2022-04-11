@@ -1,7 +1,5 @@
 package tasks.homework.day_9.classes;
 
-import project.interfaces.Transformable;
-
 import java.util.Objects;
 
 public class Water {
