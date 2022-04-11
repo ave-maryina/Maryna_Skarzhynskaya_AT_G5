@@ -3,7 +3,7 @@ package project.warerhouse;
 import java.io.IOException;
 import java.util.Map;
 
-public class Warehouse {
+public class WareHouse {
 
     private Map<Integer, VesselBox> stock;
 
@@ -16,7 +16,7 @@ public class Warehouse {
         return stock.get(stock.size() - 1);
     }
 
-    void removeBox() {
+    void removeBox() throws IOException {
         Stocktaking.disposeBox(stock.get(stock.size() -1));
         stock.remove(stock.size() - 1);
 

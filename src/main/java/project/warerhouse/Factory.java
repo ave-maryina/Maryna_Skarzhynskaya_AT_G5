@@ -6,7 +6,7 @@ import project.vessel.Containable;
 
 public class Factory {
 
-    private Warehouse warehouse;
+    private WareHouse warehouse;
 
     public void createVesselBox(int capacity, double volume, Material material, Transformable stuff, Class<?> clazz) throws InterruptedException {
         createVessel(volume, material, stuff, clazz);
