@@ -1,0 +1,83 @@
+СПАРТАК
+
+//img[@title='Спартак']
+//div[@class='header__logo']//img
+
+//ul[@class='menu full']//a[contains(text(), 'Импрессо')]
+//a[@class='current']
+//a[@href='/products/Impresso/'][1]
+
+//a[@class='has_child']/span[contains(text(), 'Информация для партнеров')]
+
+//div[@class='header__search']
+//i[@class='search fa search-btn lupa'] 
+
+//span[@class='header__eye']//img
+//img[@src='/include/eye.svg']
+
+//div[@class='header__lang']/a[contains(text(), 'Ru')]
+//a[@class='header__lang__item header__lang__item_ru active']
+
+//div[@class='header__lang']/a[contains(text(), 'Ch')]
+//a[@href='/cn/']
+
+//a[contains(text(), 'Скачать каталог')]
+//a[@class='download-catalog']
+
+//a[@class='flex-next']
+//li[@class='flex-nav-next']/child::a
+//a[@href='#']
+
+//a[contains(text(), '2')]
+//ol//descendant::a[position()=2]
+//ol//descendant::a[2]
+
+//div[contains(@class, 'top_slider')]//a[@href='https://vk.com/spartakby']
+//header//a[@href='https://vk.com/spartakby']
+
+//div[contains(@class, 'top_slider')]//a[@href='https://www.youtube.com/channel/UC2xYusMBxs4XkwoPotvTw4A']
+//header//a[@href='https://www.youtube.com/channel/UC2xYusMBxs4XkwoPotvTw4A']
+
+
+MAIL.RU
+
+//div[@id='ph-whiteline']//a[@href='https://trk.mail.ru/c/ds8xq6?mt_sub1=mail.ru&mt_sub5=1']
+//div[@id='ph-whiteline']//a[contains(text(), 'Mail.ru')]
+
+//div[@id='ph-whiteline']//a[position()=3]
+//a[@href='https://trk.mail.ru/c/pqaft6?mt_sub1=mail.ru&mt_sub5=1']
+
+//a[@href='//account.mail.ru/signup?from=navi&lang=ru_RU&siteid=169&app_id_mytracker=58519']
+//div[contains(@class, 'ph-auth')]/a
+
+//button[contains(@class, 'ph-login svelte')]
+//button[contains(text(), 'Войти')]
+
+//a[@href='https://trk.mail.ru/c/veoz41']
+//div[@id='mailbox']//a
+
+//div[@id='mailbox']//button
+//button[@data-testid='enter-mail-primary']
+
+//a[contains(text(), 'Создать почту')]
+//a[@href='//account.mail.ru/signup?from=main&rf=auth.mail.ru&app_id_mytracker=58519']
+
+//a[contains(@class, 'weather__block weather__block')]
+//div[contains(@data-testid, 'weather')]/a
+
+//div[contains(@class, 'weather__header')]//a[contains(@class, 'weather__more')]
+//div[contains(@class, 'weather__header')]//a[contains(@href, 'pogoda')]
+
+//input[@id='q']
+//input[@name='q']
+
+//button[@id='search:submit']
+//button[contains(@class, 'btn search')]
+
+//a[@href='//lady.mail.ru/']
+//a[contains(text(), 'Леди')]
+
+//ul[contains(@class, 'tabs-content')]//li[position()=2]
+//ul[contains(@class, 'tabs-content')]//li[2]
+
+
