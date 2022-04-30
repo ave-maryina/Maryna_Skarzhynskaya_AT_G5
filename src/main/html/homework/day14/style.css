@@ -1,0 +1,31 @@
+H1 {
+    text-align: center;
+    font-size: 500%;
+    font-family: Century Gothic, sans-serif;
+}
+form {text-align:center;}
+input {
+    background: url(1.jpg);
+    background-position: center;
+    background-size: 500px 150px;
+    font-size: 200%;
+    font-weight: bold;
+    border: none;
+}
+input:hover {
+    color: transparent;
+    background:url(1.png);
+    cursor: url("k.png"), pointer;
+}
+p {
+    text-align: center;
+    font-family: Comic Sans MS, sans-serif;
+    color: #414141;
+    font-size: 12pt;
+}
+
+
+
+
+
+
